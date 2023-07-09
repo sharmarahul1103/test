@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">  
+<head>
+<meta charset="ISO-8859-1">
+<title>Index Page</title>
+</head>
+<body>
+<form   th:action="@{/add}" th:object="${complaint}" method="POST" >
+<table>
+      <tr>
+      
+      <td> <input type="text" th:field="*{empName}" placeholder="enter name"/>   </td>
+      </tr>
+
+      <tr>
+       <td> <input type="text" th:field="*{empId}" placeholder="enterId"/>   </td>
+      </tr>
+      <tr>
+      <td> <input type="text" th:field="*{compName}" placeholder="enter company Name"/>   </td>
+      </tr>
+      <tr>
+       <td> <input type="text" th:field="*{issue}" placeholder="enter issue"/>   </td>
+      </tr>
+      
+      <tr>
+      <td> <input type="text" th:field="*{desc}" placeholder="enter Description"/>   </td>
+      </tr>
+      
+      
+      <button  type="submit">SUBMIT   </button>
+      
+      
+      
+      
+
+</table>
+</form>
+</body>
+</html>

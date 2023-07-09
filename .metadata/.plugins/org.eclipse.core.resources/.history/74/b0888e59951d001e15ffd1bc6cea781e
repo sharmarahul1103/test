@@ -1,0 +1,16 @@
+package com.qr.Entity;
+
+import org.springframework.data.mongodb.core.mapping.Document;
+
+@Document(collection = "first")
+public class Complaint {
+	
+	private Integer id;
+	private  String empName;
+	private String  empId;
+	private String  compName;
+	private String issue;
+	private String desc;
+	
+
+}

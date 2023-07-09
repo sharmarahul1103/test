@@ -1,0 +1,28 @@
+package com.Product.Service;
+
+import org.springframework.stereotype.Service;
+
+import com.Product.Entity.Product;
+import com.Product.Repo.ProductRepo;
+
+import lombok.RequiredArgsConstructor;
+
+@Service
+@RequiredArgsConstructor
+public class ProductService {
+
+	private final ProductRepo productRepo;
+	
+	
+	public Product addProduct(Product product)
+	{
+	    return	productRepo.save(product);
+	}
+	
+	
+	public Product findProduct(Integer id)
+	{
+		productRepo.
+	}
+	
+}

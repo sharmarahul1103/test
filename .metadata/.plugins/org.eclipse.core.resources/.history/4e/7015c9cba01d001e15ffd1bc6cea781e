@@ -1,0 +1,37 @@
+package com.qr.Controller;
+
+import java.util.UUID;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.qr.Entity.Complaint;
+import com.qr.Repo.ComplaintRepo;
+
+@RestController
+public class MyController {
+	
+	@Autowired
+	ComplaintRepo complaintRepo;
+
+	@GetMapping("/test")
+	public String test()
+	{
+		return "test";
+		
+	}
+	
+	@PostMapping("/add")
+	public ResponseEntity<Complaint> addComplaint(@RequestBody Complaint complaint)
+	{
+		complaint.setId(UUID.randomUUID().toString());
+	Complaint c=complaintRepo.save(complaint);
+	return ResponseEntity.ok(c);
+	}
+	
+	
+}

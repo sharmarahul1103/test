@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<h2>Complaint Details</h2>
+<table>
+     <thead>
+       <tr>
+         <th>Complaint-Id</th>
+         <th>Employee-Name</th>
+         <th>Employee-Id</th>
+         <th>Company-Name</th>
+         <th>Issue-type</th>
+         <th>Description</th>
+       </tr>
+       </thead>
+       
+         
+
+</table>
+
+</body>
+</html>

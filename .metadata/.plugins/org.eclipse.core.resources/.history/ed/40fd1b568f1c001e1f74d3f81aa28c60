@@ -1,0 +1,39 @@
+package com.Order.Service;
+
+import java.util.UUID;
+
+import org.springframework.stereotype.Service;
+
+import com.Order.Entity.Order;
+import com.Order.Entity.OrderLineItems;
+import com.Order.dto.OrderLineItemsDto;
+import com.Order.dto.OrderRequest;
+
+@Service
+public class OrderService {
+	
+	
+	
+	public void placeOrder(OrderRequest orderRequest)
+	{
+		Order order=new Order();
+		order.setOrderNumber(UUID.randomUUID().toString());
+		orderRequest.getOrderLineItemsDto().stream()
+		.map(orderLinesItemsDto  -> mapToDto(orderLinesItemsDto))
+		.toList();
+		
+		
+	}
+	
+	
+	private OrderLineItems mapToDto(OrderLineItemsDto orderLineItemsDto)
+	{
+		OrderLineItems orderLineItems=new OrderLineItems();
+		orderLineItems.setPrice(orderLineItemsDto.getPrice());
+		orderLineItems.setQty(orderLineItemsDto.getQty());
+		orderLineItems.setSkuCode(orderLineItemsDto.getSkuCode());
+	
+	   return orderLineItems;
+	}
+
+}

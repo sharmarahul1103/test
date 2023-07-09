@@ -1,0 +1,5 @@
+spring.data.mongodb.uri=mongodb+srv://rahulsharma11395:Rahul@2206@cluster0.dba4adt.mongodb.net/?retryWrites=true&w=majority
+spring.data.mongodb.port=27017
+spring.data.mongodb.database=qrdb
+spring.thymeleaf.cache=false  
+spring.thymeleaf.suffix: .html  

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">  
+<head>
+<meta charset="ISO-8859-1">
+<title>Index Page</title>
+</head>
+<body>
+<form action="add" method="post">
+<table>
+      <tr>
+      <td> <label for="empName">Employee-Name </label> </td>
+      <td> <input type="text" name="empName"/>   </td>
+      </tr>
+
+
+</table>
+</form>
+
+
+</body>
+</html>

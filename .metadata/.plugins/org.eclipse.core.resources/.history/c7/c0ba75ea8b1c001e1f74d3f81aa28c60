@@ -1,0 +1,10 @@
+package com.Order.Entity;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name = "t_order_line_items")
+public class OrderLineItems {
+
+}

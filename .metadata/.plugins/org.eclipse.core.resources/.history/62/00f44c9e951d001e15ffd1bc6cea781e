@@ -1,0 +1,5 @@
+package com.qr.Repo;
+
+public interface ComplaintRepo {
+
+}
